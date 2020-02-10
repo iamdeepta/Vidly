@@ -1,0 +1,23 @@
+﻿@model Vidly.Models.Customer
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Customer</h2>
+@using (Html.BeginForm("Create", "Customers")) //here Customers is controller and create is action
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name) @*can also use raw html-> <label></label> tag*@
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })  @*can also use <input> tag*@
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Birthdate) @*can also use raw html-> <label></label> tag*@
+        @Html.TextBoxFor(m => m.Birthdate, new { @class = "form-control" })  @*can also use <input> tag*@
+    </div>
+    
+    <div class="checkbox"></div>
+    <label>
+        @Html.CheckBoxFor(m => m.IsSubscribedToNewsletter) Subscribed To Newsletter? 
+    </label>
+}
