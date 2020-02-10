@@ -209,6 +209,18 @@
     <Compile Include="Migrations\202002091206513_SetNameOfMembershipTypes.designer.cs">
       <DependentUpon>202002091206513_SetNameOfMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002100541079_DeleteBirthdateFromCustomer.cs" />
+    <Compile Include="Migrations\202002100541079_DeleteBirthdateFromCustomer.designer.cs">
+      <DependentUpon>202002100541079_DeleteBirthdateFromCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002100550153_AddBirthdateToCustomer.cs" />
+    <Compile Include="Migrations\202002100550153_AddBirthdateToCustomer.designer.cs">
+      <DependentUpon>202002100550153_AddBirthdateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002100558270_SetBirthdateOfCustomer.cs" />
+    <Compile Include="Migrations\202002100558270_SetBirthdateOfCustomer.designer.cs">
+      <DependentUpon>202002100558270_SetBirthdateOfCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -421,6 +433,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002091206513_SetNameOfMembershipTypes.resx">
       <DependentUpon>202002091206513_SetNameOfMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002100541079_DeleteBirthdateFromCustomer.resx">
+      <DependentUpon>202002100541079_DeleteBirthdateFromCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002100550153_AddBirthdateToCustomer.resx">
+      <DependentUpon>202002100550153_AddBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002100558270_SetBirthdateOfCustomer.resx">
+      <DependentUpon>202002100558270_SetBirthdateOfCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
