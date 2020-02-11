@@ -36,6 +36,17 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)  //can also use NewCustomerViewModel viewModel in parameter
         {
+            if (!ModelState.IsValid)      //this is the second step of validation. 1st step is to put data annotations in property such as [Required]
+            {
+                var viewModel = new CustomerFormViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+                return View("CustomerForm", viewModel);
+            }
+
+
             if(customer.Id == 0)
                 _context.Customers.Add(customer);  //it is just added into memory not in the database(for new insertion of customer)
             else
