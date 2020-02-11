@@ -27,6 +27,7 @@ textarea {
 .field-validation-error{
     color : red;
 }
+/*color input field to red for validation*/ 
 .input-validation-error{
     border: 2px solid red;
 }

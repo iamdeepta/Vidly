@@ -15,12 +15,14 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Birthdate) @*can also use raw html-> <label></label> tag*@
         @Html.TextBoxFor(m => m.Customer.Birthdate, "{0:d MMM yyyy}", new { @class = "form-control" })  @*can also use <input> tag*@
+        @Html.ValidationMessageFor(m => m.Customer.Birthdate)
     </div>
 
 
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.MembershipTypeId) @*can also use raw html-> <label></label> tag*@
         @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })  @*can also use <input> tag*@
+        @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
     </div>
 
     <div class="checkbox">
