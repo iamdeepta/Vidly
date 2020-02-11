@@ -10,5 +10,16 @@ namespace Vidly.ViewModels
     {
         public IEnumerable<MembershipType> MembershipTypes { get; set; }   //code became more loosely coupled if we use IEmunerable instead of List
         public Customer Customer { get; set; }
+
+        public string Title
+        {
+            get
+            {
+                if (Customer != null && Customer.Id != 0)
+                    return "Edit Customer";
+
+                return "New Customer";
+            }
+        }
     }
 }
