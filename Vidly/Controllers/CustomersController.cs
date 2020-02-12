@@ -35,6 +35,7 @@ namespace Vidly.Controllers
             return View("CustomerForm", viewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]     //add this attribute from being hacked
         public ActionResult Save(Customer customer)  //can also use NewCustomerViewModel viewModel in parameter
         {
             if (!ModelState.IsValid)      //this is the second step of validation. 1st step is to put data annotations in property such as [Required]
