@@ -29,6 +29,7 @@ namespace Vidly.Controllers
             var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
             {
+                Customer = new Customer(),      //this solves the error for hidden customer id and initialized it to 0
                 MembershipTypes = membershipTypes
             };
             return View("CustomerForm", viewModel);
